@@ -45,7 +45,7 @@
 | category_id      | integer    | null: false                    |
 | condition_id     | integer    | null: false                    |
 | shipping_fee_id  | integer    | null: false                    |
-| shipping_from_id | integer    | null: false                    |
+| prefecture_id    | integer    | null: false                    |
 | shipping_date_id | integer    | null: false                    |
 
 ### Association
