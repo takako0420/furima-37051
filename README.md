@@ -20,15 +20,15 @@
 
 ## Buyers テーブル
 
-| Column        | Type       | Options           |
-| ------------- | ---------- | ----------------- |
-| trading       | references | foreign_key: true |
-| post_number   | string     | null: false       |
-| prefecture_id | integer    | null: false       |
-| city          | string     | null: false       |
-| address       | string     | null: false       |
-| building_name | string     |                   |
-| phone_number  | string     | null: false       |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| trading       | references | null: false, foreign_key: true |
+| post_number   | string     | null: false                    |
+| prefecture_id | integer    | null: false                    |
+| city          | string     | null: false                    |
+| address       | string     | null: false                    |
+| building_name | string     |                                |
+| phone_number  | string     | null: false                    |
 
 ### Association
 
@@ -55,10 +55,10 @@
 
 ## Tradings テーブル
 
-| Column | Type       | Options           |
-| ------ | ---------- | ----------------- |
-| item   | references | foreign_key: true |
-| user   | references | foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| item   | references | null: false, foreign_key: true |
+| user   | references | null: false, foreign_key: true |
 
 ### Association
 
