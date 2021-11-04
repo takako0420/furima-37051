@@ -3,7 +3,6 @@ class Item < ApplicationRecord
 
   # item バリデーション
   with_options presence: true do
-    validates :user_id
     validates :item_name
     validates :price, numericality: {
       only_integer: true, greater_than_or_equal_to: 300,
