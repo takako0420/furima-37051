@@ -3,9 +3,9 @@ FactoryBot.define do
     item_name          { Faker::Lorem.sentence }
     price              { rand(300..9_999_999) }
     text               { Faker::Lorem.sentence }
-    
+
     category_id        { rand(2..11) }
-                  
+
     condition_id       { rand(2..7) }
     shipping_fee_id    { rand(2..3) }
     prefecture_id      { rand(2..48) }
