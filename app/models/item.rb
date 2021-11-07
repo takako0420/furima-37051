@@ -33,7 +33,10 @@ class Item < ApplicationRecord
 
   # アソシエーション
   belongs_to :user
+  has_one :trading
+
   has_one_attached :image
+
   belongs_to :category
   belongs_to :condition
   belongs_to :prefecture
