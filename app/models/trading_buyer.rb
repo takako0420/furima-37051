@@ -1,6 +1,6 @@
 class TradingBuyer
   include ActiveModel::Model
-    attr_accessor :item_id, :user_id, :post_number, :prefecture_id, :city, :address, :building_name, :phone_number
+    attr_accessor :item_id, :user_id, :post_number, :prefecture_id, :city, :address, :building_name, :phone_number, :token
 
   with_options presence: true do
     validates :item_id
