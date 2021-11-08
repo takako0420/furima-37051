@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :trading_buyer do
-    token            { "tok_abcdefghijk00000000000000000" }
+    token            { 'tok_abcdefghijk00000000000000000' }
     post_number      { '123-4567' }
     prefecture_id    { rand(2..48) }
     city             { '東京都' }

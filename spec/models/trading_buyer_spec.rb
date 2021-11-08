@@ -26,19 +26,19 @@ RSpec.describe TradingBuyer, type: :model do
         expect(@trading_buyer.errors.full_messages).to include("Token can't be blank")
       end
       it '郵便番号がないと保存できない' do
-        @trading_buyer.post_number =''
+        @trading_buyer.post_number = ''
         @trading_buyer.valid?
         expect(@trading_buyer.errors.full_messages).to include("Post number can't be blank")
       end
       it '郵便番号にハイフンがないと保存できない' do
         @trading_buyer.post_number = '1234567'
         @trading_buyer.valid?
-        expect(@trading_buyer.errors.full_messages).to include("Post number is invalid. Enter it as follows (e.g. 123-4567)")
+        expect(@trading_buyer.errors.full_messages).to include('Post number is invalid. Enter it as follows (e.g. 123-4567)')
       end
       it '郵便番号が全角数字だと保存できない' do
         @trading_buyer.post_number = '１２３-４５６７'
         @trading_buyer.valid?
-        expect(@trading_buyer.errors.full_messages).to include("Post number is invalid. Enter it as follows (e.g. 123-4567)")
+        expect(@trading_buyer.errors.full_messages).to include('Post number is invalid. Enter it as follows (e.g. 123-4567)')
       end
       it '都道府県が１だと保存できない' do
         @trading_buyer.prefecture_id = '1'
@@ -63,17 +63,17 @@ RSpec.describe TradingBuyer, type: :model do
       it '電話番号が10桁未満だと保存できない' do
         @trading_buyer.phone_number = '123456789'
         @trading_buyer.valid?
-        expect(@trading_buyer.errors.full_messages).to include("Phone number is too short")
+        expect(@trading_buyer.errors.full_messages).to include('Phone number is too short')
       end
       it '電話番号が全角数字だと保存できない' do
         @trading_buyer.phone_number = '１２３４５６７８９０'
         @trading_buyer.valid?
-        expect(@trading_buyer.errors.full_messages).to include("Phone number is invalid. Input only number")
+        expect(@trading_buyer.errors.full_messages).to include('Phone number is invalid. Input only number')
       end
       it '電話番号にハイフンがあると保存できない' do
         @trading_buyer.phone_number = '123-4567-8901'
         @trading_buyer.valid?
-        expect(@trading_buyer.errors.full_messages).to include("Phone number is invalid. Input only number")
+        expect(@trading_buyer.errors.full_messages).to include('Phone number is invalid. Input only number')
       end
       it 'userが紐づいていなければ保存できない' do
         @trading_buyer.user_id = nil
