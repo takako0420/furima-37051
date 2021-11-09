@@ -64,3 +64,5 @@ gem 'image_processing', '~> 1.2'
 gem 'active_hash'
 
 gem 'pry-rails'
+
+gem 'payjp'
